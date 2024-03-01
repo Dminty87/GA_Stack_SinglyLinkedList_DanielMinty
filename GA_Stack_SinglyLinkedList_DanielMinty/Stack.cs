@@ -75,6 +75,19 @@ namespace GA_Stack_SinglyLinkedList_DanielMinty
             return top.Value;
         }
 
+        //Clear removes all nodes from the stack individually
+        public void Clear()
+        {
+            //While the stack is not empty
+            while (top != null)
+            {
+                //Remove the top node from the stack
+                top = top.Next;
+            }
+            //The stack is empty, update count
+            count = 0;
+        }
+
         class StackNode<T>
         {
             //Store the node's value and the next node in the stack
